@@ -280,11 +280,11 @@ music.play(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundEx
 
 ## Final testing! @showdialog
 
-When you click **Done** on the tutorial, you will get access to all of the blocks in MakeCode.
+If you click **Done** on the tutorial, you will get access to all of the blocks in MakeCode.
 
 If you would like to see the other options, and try some more complex ideas, click Done.
 
-If you would like to see editing your game using the blocks we have given you so far, do not click Done.
+If you would like to keep editing your game using the blocks we have given you so far, do not click Done.
 
 
 ## Continue...
