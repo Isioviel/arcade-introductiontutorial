@@ -67,7 +67,7 @@ Click ``||variables:rename variable||`` and set a new name - just pick one word 
 ```blocks
 scene.setBackgroundImage(img`.`)
 let mySprite = sprites.create(img`.`, SpriteKind.Player)
-mySprite.setPosition(0, 0)
+mySprite.setPosition(20, 100)
 ```
 
 
@@ -80,7 +80,7 @@ Click into the ``||controller:Controller||`` menu, find the ``||controller: move
 ```blocks
 scene.setBackgroundImage(img`.`)
 let mySprite = sprites.create(img`.`, SpriteKind.Player)
-mySprite.setPosition(0, 0)
+mySprite.setPosition(20, 100)
 controller.moveSprite(mySprite)
 ```
 
@@ -111,7 +111,7 @@ Like you did for your player character, create or choose an image for your enemy
 ```blocks
 scene.setBackgroundImage(img`.`)
 let mySprite = sprites.create(img`.`, SpriteKind.Player)
-mySprite.setPosition(0, 0)
+mySprite.setPosition(20, 100)
 controller.moveSprite(mySprite)
 let mySprite2 = sprites.create(img`.`, SpriteKind.Enemy)
 ```
@@ -130,8 +130,84 @@ Set enemy start position - remember that it will start to chase you soon, so if 
 ```blocks
 scene.setBackgroundImage(img`.`)
 let mySprite = sprites.create(img`.`, SpriteKind.Player)
-mySprite.setPosition(0, 0)
+mySprite.setPosition(20, 100)
 controller.moveSprite(mySprite)
 let mySprite2 = sprites.create(img`.`, SpriteKind.Enemy)
-mySprite.setPosition(100, 0)
+mySprite.setPosition(140, 100)
 ```
+
+
+## Set the enemy to follow your player
+
+Click into the ``||sprites:Sprites||`` menu, find the ``||sprites: set myEnemy follow mySprite||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
+
+Click the small arrow next to ``||variables:myEnemy||`` and change it to the name of your enemy - this is probably ``||variables:mySprite2||``.
+
+**If you renamed your character earlier** click the small arrow next to ``||variables:mySprite||``, and choose the name you chose from the list. **Do not** ``||variables:rename variable||`` again, pick it from the list.
+
+```blocks
+scene.setBackgroundImage(img`.`)
+let mySprite = sprites.create(img`.`, SpriteKind.Player)
+mySprite.setPosition(20, 100)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(img`.`, SpriteKind.Enemy)
+mySprite.setPosition(140, 100)
+mySprite2.follow(mySprite)
+```
+
+
+## Testing time! @showdialog
+
+This is a good place to stop and test your game.
+
+On the small game window, click the 'full screen' button (the square picture).
+
+Practice running away from the enemy, then click the same button to get back to the editor.
+
+If something goes wrong, you need to do some debugging!
+
+Check the code for any disconnected blocks, or any exclamation marks. If you need help, ask your workshop leader.
+
+
+## Slow the enemy down
+
+The enemy is quick! It will be very difficult to win the game at the moment.
+
+Click the ``||sprites:+||`` symbol at the end of the ``||sprites:follow||`` block, and reduce the speed of the enemy.
+
+Test out the game, and edit the speed until you are happy with it.
+
+```blocks
+scene.setBackgroundImage(img`.`)
+let mySprite = sprites.create(img`.`, SpriteKind.Player)
+mySprite.setPosition(20, 100)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(img`.`, SpriteKind.Enemy)
+mySprite.setPosition(140, 100)
+mySprite2.follow(mySprite, 50)
+```
+
+
+## Add scoring
+
+Now that it is possible to run away from the enemy, you can keep track of the score.
+
+To do this, we need to make a new section of code.
+
+Click the ``||game:Game||`` menu, and find the ``||game:on game update every 500ms||`` block. Drag-and-drop it onto an empty space on the screen.
+
+Click the ``||info:Info||`` menu, find the ``||info:change score by 1||`` block, and drag-and-drop it inside your new ``||game:on game update||`` loop.
+
+Every half a second, you get a point! Test out you game, then decide how often you want to get points, and how many points you want to get.
+
+~hint What to change?
+ - to change how often you get points, edit the number in the 'on game update' loop
+ - to change how many points you get each time, edit the numebr in the 'change score by' block
+hint~
+
+```blocks
+game.onUpdateInterval(500, function () {
+    info.changeScoreBy(1)
+})
+```
+
