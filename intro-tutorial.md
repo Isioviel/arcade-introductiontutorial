@@ -268,6 +268,11 @@ If you are not sure what to do, ask your workshop leader for some ideas.
 ```ghost
 let mySprite = sprites.create(img`.`, SpriteKind.Player)
 mySprite.setStayInScreen(true)
+mySprite.sayText(":)")
+sprites.destroy(mySprite)
+effects.confetti.startScreenEffect()
+effects.confetti.endScreenEffect()
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {})
 game.setGameOverEffect(true, effects.confetti)
 game.setGameOverPlayable(true, music.melodyPlayable(music.powerUp), false)
 game.setGameOverMessage(true, "GAME OVER!")
@@ -292,3 +297,5 @@ If you would like to keep editing your game using the blocks we have given you s
 ## Continue...
 
 If you would like access to more blocks, click Done to exit the tutorial.
+
+If you are happy with the blocks you have, carry on without clicking Done.
