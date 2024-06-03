@@ -94,16 +94,14 @@ controller.moveSprite(mySprite)
 
 ## Testing time! @showdialog
 
-This is a good place to stop and test your game.
-
 On the small game window, click the 'full screen' button (the square picture).
 ![Full screen button](https://raw.githubusercontent.com/Isioviel/arcade-introductiontutorial/a44665c29cc484ead76de9241f5d2919607050e9/images/fullscreen.PNG)
 
 Practice controlling your player character, then click the same button to get back to the editor.
 
-**If something goes wrong, you need to do some debugging!**
+If something goes wrong, you need to do some debugging!
 
-Check the code for any disconnected blocks, or any exclamation marks. If you need help, ask your workshop leader.
+Check the code for disconnected blocks, or exclamation marks. If you need help, ask your workshop leader.
 
 
 ## Add an enemy
@@ -169,16 +167,14 @@ mySprite2.follow(mySprite)
 
 ## Testing time! @showdialog
 
-This is a good place to stop and test your game.
-
 On the small game window, click the 'full screen' button (the square picture).
 ![Full screen button](https://raw.githubusercontent.com/Isioviel/arcade-introductiontutorial/a44665c29cc484ead76de9241f5d2919607050e9/images/fullscreen.PNG)
 
 Practice running away from the enemy, then click the same button to get back to the editor.
 
-**If something goes wrong, you need to do some debugging!**
+If something goes wrong, you need to do some debugging!
 
-Check the code for any disconnected blocks, or any exclamation marks. If you need help, ask your workshop leader.
+Check the code for disconnected blocks, or exclamation marks. If you need help, ask your workshop leader.
 
 
 ## Slow the enemy down
@@ -223,3 +219,76 @@ game.onUpdateInterval(500, function () {
 })
 ```
 
+
+## End the game if the enemy catches you
+
+At the moment, the game runs forever. You are going to change it so that if the enemy catches you, the game ends.
+
+Click the ``||sprites:Sprites||`` menu, and choose the ``||sprites:on sprite of kind Player overlaps with sprite of kind Player||`` block. Drag-and-drop it onto an empty space on the screen.
+
+Click the **second** ``||sprites:Player||`` option, and change it to ``||sprites:Enemy||``.
+
+The block now controls what happens when your player sprite overlaps (or touches) an enemy sprite.
+
+Click the ``||game:Game||`` menu, and find ``||game:gave over||``. Drag-and-drop this into the ``||sprites:overlap||`` block, and toggle it to **LOSE**.
+
+```blocks
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    game.gameOver(false)
+})
+```
+
+
+## Testing time! @showdialog
+
+On the small game window, click the 'full screen' button (the square picture).
+![Full screen button](https://raw.githubusercontent.com/Isioviel/arcade-introductiontutorial/a44665c29cc484ead76de9241f5d2919607050e9/images/fullscreen.PNG)
+
+Run away from the enemy as long as you can, then let it catch you. What score do you get?
+
+If something goes wrong, you need to do some debugging!
+
+Check the code for disconnected blocks, or exclamation marks. If you need help, ask your workshop leader.
+
+
+## Create a start and end to your game
+
+You now have a working game, well done!
+
+Spend some time adding to the game so far, by changing what happens at the start, and when the game ends.
+
+Look through the ``||game:Game||`` and ``||music:Music||`` menus for some ideas.
+
+For example:
+- Add a ``||game:Splash||`` block to your ``||loops:on start||`` loop, to show a starting screen.
+- Add a ``||game:use effect confetti||`` block to your ``||sprites:overlap||`` loop, after the game ends.
+
+If you are not sure what to do, ask your workshop leader for some ideas.
+
+```ghost
+mySprite.setStayInScreen(true)
+game.setGameOverEffect(true, effects.confetti)
+game.setGameOverPlayable(true, music.melodyPlayable(music.powerUp), false)
+game.setGameOverMessage(true, "GAME OVER!")
+game.splash("")
+music.play(music.stringPlayable("- - - - - - - - ", 120), music.PlaybackMode.UntilDone)
+music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
+music.play(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
+```
+
+
+## Testing time! @showdialog
+
+On the small game window, click the 'full screen' button (the square picture).
+![Full screen button](https://raw.githubusercontent.com/Isioviel/arcade-introductiontutorial/a44665c29cc484ead76de9241f5d2919607050e9/images/fullscreen.PNG)
+
+Make sure that your game works before moving on to the next section.
+
+If something goes wrong, you need to do some debugging!
+
+Check the code for disconnected blocks, or exclamation marks. If you need help, ask your workshop leader.
+
+
+## Continue...
+
+Something something
