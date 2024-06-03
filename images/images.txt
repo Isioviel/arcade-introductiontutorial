@@ -1,0 +1,1 @@
+fullscreen.PNG = screenshot from MakeCode Arcade editor, to highlight the button to press
