@@ -20,7 +20,9 @@ Click into the ``||scene:Scene||`` menu, find the ``||scene:set background image
 
 Click the grey box in the ``||scene:set background image||`` block to choose your background image. You can draw your own, or click into the Gallery to pick a background.
 
-When you have chosen, click Next to see the next instruction.
+Click Done on the bottom right to get back to the code editor and see your chosen picture in the game.
+
+When you have finished, click Next on the tutorial to see the next instruction.
 
 ```blocks
 scene.setBackgroundImage(img`.`)
@@ -46,9 +48,9 @@ let mySprite = sprites.create(img`.`, SpriteKind.Player)
 
 Your new character starts the game right in the middle of the screen - this might not be the best place to start.
 
-Click into the ``||sprites:Sprites||`` menu, find the ``||sprites: set mySprite position to||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
+Click into the ``||sprites:Sprites||`` menu, find the ``||sprites:set mySprite position to||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
 
-Click on one of the numbers in the ``||sprites: set mySprite position to||`` block to choose the starting position of your character.
+Click on one of the numbers in the ``||sprites:set mySprite position to||`` block to choose the starting position of your character.
 
 ~hint What are x and y?
  - x and y are called co-ordinates.
@@ -58,11 +60,13 @@ Click on one of the numbers in the ``||sprites: set mySprite position to||`` blo
  - the bigger y is, the further down your character will start the game.
 hint~
 
-**Optional**: your character is currently called 'mySprite' - you can rename it if you like.
-
-Choose one of the blocks that includes ``||variables:mySprite||`` and click the small arrow next to the name.
-
-Click ``||variables:rename variable||`` and set a new name - just pick one word with no spaces, or the game will get confused. All of the blocks that effect your character will change.
+~hint Optional extra coding - rename your sprites
+ - your character is currently called 'mySprite' - you can rename it to something more memorable.
+ - choose one of the blocks that includes the words 'mySprite' and click the small arrow next to the name.
+ - click 'rename variable' and set a new name.
+ - use one word with no spaces, or the game will get confused!
+ - all of the blocks that effect your character will change to use the new name
+hint~
 
 ```blocks
 scene.setBackgroundImage(img`.`)
@@ -73,9 +77,12 @@ mySprite.setPosition(20, 100)
 
 ## Move your character
 
-Click into the ``||controller:Controller||`` menu, find the ``||controller: move mySprite with buttons||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
+Click into the ``||controller:Controller||`` menu, find the ``||controller:move mySprite with buttons||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
 
-**If you renamed your character earlier** click the small arrow next to ``||variables:mySprite||``, and choose the name you chose from the list. **Do not** ``||variables:rename variable||`` again, pick it from the list.
+~hint If you renamed your character earlier
+ - click the small arrow next to 'mySprite', and choose the name you chose from the list.
+ - Do not 'rename variable' again, pick it from the list.
+hint~
 
 ```blocks
 scene.setBackgroundImage(img`.`)
@@ -90,6 +97,7 @@ controller.moveSprite(mySprite)
 This is a good place to stop and test your game.
 
 On the small game window, click the 'full screen' button (the square picture).
+![Full screen button](https://github.com/Isioviel/arcade-introductiontutorial/blob/a44665c29cc484ead76de9241f5d2919607050e9/images/fullscreen.PNG)
 
 Practice controlling your player character, then click the same button to get back to the editor.
 
@@ -143,7 +151,10 @@ Click into the ``||sprites:Sprites||`` menu, find the ``||sprites: set myEnemy f
 
 Click the small arrow next to ``||variables:myEnemy||`` and change it to the name of your enemy - this is probably ``||variables:mySprite2||``.
 
-**If you renamed your character earlier** click the small arrow next to ``||variables:mySprite||``, and choose the name you chose from the list. **Do not** ``||variables:rename variable||`` again, pick it from the list.
+~hint If you renamed your character earlier
+ - click the small arrow next to 'mySprite', and choose the name you chose from the list.
+ - Do not 'rename variable' again, pick it from the list.
+hint~
 
 ```blocks
 scene.setBackgroundImage(img`.`)
@@ -202,7 +213,7 @@ Every half a second, you get a point! Test out you game, then decide how often y
 
 ~hint What to change?
  - to change how often you get points, edit the number in the 'on game update' loop
- - to change how many points you get each time, edit the numebr in the 'change score by' block
+ - to change how many points you get each time, edit the number in the 'change score by' block
 hint~
 
 ```blocks
