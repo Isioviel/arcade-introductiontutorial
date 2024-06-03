@@ -97,11 +97,11 @@ controller.moveSprite(mySprite)
 This is a good place to stop and test your game.
 
 On the small game window, click the 'full screen' button (the square picture).
-![Full screen button](https://github.com/Isioviel/arcade-introductiontutorial/blob/a44665c29cc484ead76de9241f5d2919607050e9/images/fullscreen.PNG)
+![Full screen button](https://raw.githubusercontent.com/Isioviel/arcade-introductiontutorial/a44665c29cc484ead76de9241f5d2919607050e9/images/fullscreen.PNG)
 
 Practice controlling your player character, then click the same button to get back to the editor.
 
-If something goes wrong, you need to do some debugging!
+**If something goes wrong, you need to do some debugging!**
 
 Check the code for any disconnected blocks, or any exclamation marks. If you need help, ask your workshop leader.
 
@@ -172,10 +172,11 @@ mySprite2.follow(mySprite)
 This is a good place to stop and test your game.
 
 On the small game window, click the 'full screen' button (the square picture).
+![Full screen button](https://raw.githubusercontent.com/Isioviel/arcade-introductiontutorial/a44665c29cc484ead76de9241f5d2919607050e9/images/fullscreen.PNG)
 
 Practice running away from the enemy, then click the same button to get back to the editor.
 
-If something goes wrong, you need to do some debugging!
+**If something goes wrong, you need to do some debugging!**
 
 Check the code for any disconnected blocks, or any exclamation marks. If you need help, ask your workshop leader.
 
