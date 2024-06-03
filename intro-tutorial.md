@@ -230,7 +230,7 @@ Click the **second** ``||sprites:Player||`` option, and change it to ``||sprites
 
 The block now controls what happens when your player sprite overlaps (or touches) an enemy sprite.
 
-Click the ``||game:Game||`` menu, and find ``||game:gave over||``. Drag-and-drop this into the ``||sprites:overlap||`` block, and toggle it to **LOSE**.
+Click the ``||game:Game||`` menu, and find ``||game:game over||``. Drag-and-drop this into the ``||sprites:overlap||`` block, and toggle it to **LOSE**.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
@@ -266,6 +266,7 @@ For example:
 If you are not sure what to do, ask your workshop leader for some ideas.
 
 ```ghost
+let mySprite = sprites.create(img`.`, SpriteKind.Player)
 mySprite.setStayInScreen(true)
 game.setGameOverEffect(true, effects.confetti)
 game.setGameOverPlayable(true, music.melodyPlayable(music.powerUp), false)
@@ -277,18 +278,15 @@ music.play(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundEx
 ```
 
 
-## Testing time! @showdialog
+## Final testing! @showdialog
 
-On the small game window, click the 'full screen' button (the square picture).
-![Full screen button](https://raw.githubusercontent.com/Isioviel/arcade-introductiontutorial/a44665c29cc484ead76de9241f5d2919607050e9/images/fullscreen.PNG)
+When you click **Done** on the tutorial, you will get access to all of the blocks in MakeCode.
 
-Make sure that your game works before moving on to the next section.
+If you would like to see the other options, and try some more complex ideas, click Done.
 
-If something goes wrong, you need to do some debugging!
-
-Check the code for disconnected blocks, or exclamation marks. If you need help, ask your workshop leader.
+If you would like to see editing your game using the blocks we have given you so far, do not click Done.
 
 
 ## Continue...
 
-Something something
+If you would like access to more blocks, click Done to exit the tutorial.
