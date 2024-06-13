@@ -162,7 +162,7 @@ let mySprite = sprites.create(img`.`, SpriteKind.Player)
 mySprite.setPosition(20, 100)
 controller.moveSprite(mySprite)
 let mySprite2 = sprites.create(img`.`, SpriteKind.Enemy)
-mySprite.setPosition(140, 100)
+mySprite2.setPosition(140, 100)
 ```
 
 
@@ -188,7 +188,7 @@ let mySprite = sprites.create(img`.`, SpriteKind.Player)
 mySprite.setPosition(20, 100)
 controller.moveSprite(mySprite)
 let mySprite2 = sprites.create(img`.`, SpriteKind.Enemy)
-mySprite.setPosition(140, 100)
+mySprite2.setPosition(140, 100)
 mySprite2.follow(mySprite)
 ```
 
@@ -222,7 +222,7 @@ let mySprite = sprites.create(img`.`, SpriteKind.Player)
 mySprite.setPosition(20, 100)
 controller.moveSprite(mySprite)
 let mySprite2 = sprites.create(img`.`, SpriteKind.Enemy)
-mySprite.setPosition(140, 100)
+mySprite2.setPosition(140, 100)
 mySprite2.follow(mySprite, 50)
 ```
 
