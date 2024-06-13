@@ -86,6 +86,7 @@ mySprite.setPosition(20, 100)
 
 
 ## Move your character
+*Move your character with the joystick and arrow keys*
 
 **Find the blocks**
 - Click into the ``||controller:Controller||`` menu.
@@ -166,6 +167,7 @@ mySprite.setPosition(140, 100)
 
 
 ## Set the enemy to follow your player
+*Let the enemy chase you!*
 
 **Find the blocks**
 - Click into the ``||sprites:Sprites||`` menu.
@@ -257,6 +259,7 @@ game.onUpdateInterval(500, function () {
 
 
 ## End the game if the enemy catches you
+*Set up the end of the game.*
 
 **Find the blocks to make a new event loop**
 - Click the ``||sprites:Sprites||`` menu.
@@ -305,8 +308,8 @@ Check the code for disconnected blocks, or exclamation marks. If you need help, 
 **Look through the ``||game:Game||`` and ``||music:Music||`` menus for some ideas.**
 
 *For example:*
-- Add a ``||game:Splash||`` block to your ``||loops:on start||`` loop, to show a starting screen.
-- Add a ``||game:use effect confetti||`` block to your ``||sprites:overlap||`` loop, after the game ends.
+- Add a start screen by adding the ``||game:Splash||`` block to your ``||loops:on start||`` loop, **before** your characters move.
+- Change the ending effect by adding a ``||game:use effect confetti||`` block to your ``||sprites:overlap||`` loop, **before** the game ends.
 
 *If you are not sure what to do, ask your workshop leader for some ideas.*
 
