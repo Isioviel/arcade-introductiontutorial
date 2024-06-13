@@ -204,7 +204,7 @@ Check the code for disconnected blocks, or exclamation marks. If you need help, 
 
 
 ## Slow the enemy down
-*The enemy is quick! It will be very difficult to win the game at the moment.*
+*The enemy is too fast, it will be very difficult to win the game!*
 
 **Expand a block**
 - Click the ``||sprites:+||`` symbol at the end of the ``||sprites:follow||`` block.
@@ -228,7 +228,7 @@ mySprite2.follow(mySprite, 50)
 ## Add scoring
 *Now that it is possible to run away from the enemy, you can keep track of the score.*
 
-**Make a new event loop**
+**Find the blocks to make a new event loop**
 - Click the ``||game:Game||`` menu.
 - Find the ``||game:on game update every 500ms||`` block.
 - Drag-and-drop it onto an **empty space** on the screen.
@@ -241,7 +241,8 @@ mySprite2.follow(mySprite, 50)
 **Test the scoring**
 - At the moment, every half a second, you get a point!
 - Test out your game.
-    - How often you want to get points, and how many points you want to get.
+    - How often you want to get points?
+    - How many points do you want to get?
 
 ~hint What to change?
  - to change how often you get points, edit the number in the 'on game update' loop
@@ -257,15 +258,21 @@ game.onUpdateInterval(500, function () {
 
 ## End the game if the enemy catches you
 
-At the moment, the game runs forever. You are going to change it so that if the enemy catches you, the game ends.
+**Find the blocks to make a new event loop**
+- Click the ``||sprites:Sprites||`` menu.
+- Choose the ``||sprites:on sprite of kind Player overlaps with sprite of kind Player||`` block.
+- Drag-and-drop it onto an **empty space** on the screen.
 
-Click the ``||sprites:Sprites||`` menu, and choose the ``||sprites:on sprite of kind Player overlaps with sprite of kind Player||`` block. Drag-and-drop it onto an empty space on the screen.
+**Choose the right sprite type**
+- Click the **second** ``||sprites:Player||`` option.
+- Change it to ``||sprites:Enemy||``.
 
-Click the **second** ``||sprites:Player||`` option, and change it to ``||sprites:Enemy||``.
+*The block now controls what happens when your player sprite overlaps (or touches) an enemy sprite.*
 
-The block now controls what happens when your player sprite overlaps (or touches) an enemy sprite.
-
-Click the ``||game:Game||`` menu, and find ``||game:game over||``. Drag-and-drop this into the ``||sprites:overlap||`` block, and toggle it to **LOSE**.
+**Find the blocks**
+- Click the ``||game:Game||`` menu.
+- Find ``||game:game over||``.
+- Drag-and-drop this into the ``||sprites:overlap||`` block, and toggle it to **LOSE**.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
@@ -287,18 +294,21 @@ Check the code for disconnected blocks, or exclamation marks. If you need help, 
 
 
 ## Create a start and end to your game
+*You now have a working game, **well done**!*
 
-You now have a working game, well done!
+**Expand your game**
+- Spend some time adding to the game so far.
+- There are some blocks that you have not used yet.
+    - What do you want to happen at the start?
+    - What do you want to happens when the game ends?
 
-Spend some time adding to the game so far, by changing what happens at the start, and when the game ends.
+**Look through the ``||game:Game||`` and ``||music:Music||`` menus for some ideas.**
 
-Look through the ``||game:Game||`` and ``||music:Music||`` menus for some ideas.
-
-For example:
+*For example:*
 - Add a ``||game:Splash||`` block to your ``||loops:on start||`` loop, to show a starting screen.
 - Add a ``||game:use effect confetti||`` block to your ``||sprites:overlap||`` loop, after the game ends.
 
-If you are not sure what to do, ask your workshop leader for some ideas.
+*If you are not sure what to do, ask your workshop leader for some ideas.*
 
 ```ghost
 let mySprite = sprites.create(img`.`, SpriteKind.Player)
@@ -324,13 +334,14 @@ music.play(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundEx
 
 If you click **Done** on the tutorial, you will get access to all of the blocks in MakeCode.
 
-If you would like to see the other options, and try some more complex ideas, click Done.
+If you would like to keep editing your game using the blocks we have given you so far, **do not click Done**.
 
-If you would like to keep editing your game using the blocks we have given you so far, do not click Done.
+If you would like to see the other options, and try some more complex ideas, click Done.
 
 
 ## Continue...
 
-If you would like access to more blocks, click Done to exit the tutorial.
+**Do you want more complicated blocks to use?**
+- If you are happy with the blocks you have, carry on without clicking Done.
+- If you would like access to more blocks, click Done to exit the tutorial.
 
-If you are happy with the blocks you have, carry on without clicking Done.
