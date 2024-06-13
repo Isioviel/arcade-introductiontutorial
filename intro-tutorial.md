@@ -16,14 +16,14 @@ During the tutorial, you will only have a few blocks available to use, but there
 *Where do you want your game to be set?*
 
 **Find the blocks**
-- Click into the ``||scene:Scene||`` menu
-- Find the ``||scene:set background image||`` block
+- Click into the ``||scene:Scene||`` menu.
+- Find the ``||scene:set background image||`` block.
 - Drag-and-drop it inside the ``||loops:on start||`` loop.
 
 **Choose or create your background**
-- Click the grey box in the ``||scene:set background image||`` block to choose your background image.
-- You can draw your own, or click into the Gallery to pick a background.
-- Click Done on the bottom right to get back to the code editor and see your chosen picture in the game.
+- Click the grey box in the ``||scene:set background image||`` block.
+- Use the **Editor** to draw your own, or click into the **Gallery** to pick a background.
+- Click **Done** on the bottom right when you have finished.
 
 *When you are happy with your background, click **Next** on the tutorial to see the next instruction.*
 
@@ -32,14 +32,18 @@ scene.setBackgroundImage(img`.`)
 ```
 
 
-
 ## Choose a player character
+*Who, or what, do you want your player character to be?*
 
-Who, or what, do you want your player character to be?
+**Find the blocks**
+- Click into the ``||sprites:Sprites||`` menu.
+- Find the ``||sprites: set mySprite to||`` block.
+- Drag-and-drop it inside the ``||loops:on start||`` loop.
 
-Click into the ``||sprites:Sprites||`` menu, find the ``||variables: set mySprite to||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
-
-Click the grey box in the ``||variables: set mySprite to||`` block to choose your character's image. You can draw your own, or click into the Gallery to pick one.
+**Choose or create your sprite**
+- Click the grey box in the ``||sprites: set mySprite to||`` block.
+- Use the **Editor** to draw your own, or click into the **Gallery** to pick a character.
+- Click **Done** on the bottom right when you have finished.
 
 ```blocks
 scene.setBackgroundImage(img`.`)
@@ -48,18 +52,21 @@ let mySprite = sprites.create(img`.`, SpriteKind.Player)
 
 
 ## Adjust your player character
+*Where should your player start the game?*
 
-Your new character starts the game right in the middle of the screen - this might not be the best place to start.
+**Find the blocks**
+- Click into the ``||sprites:Sprites||`` menu.
+- Find the ``||sprites:set mySprite position to||`` block.
+- Drag-and-drop it inside the ``||loops:on start||`` loop.
 
-Click into the ``||sprites:Sprites||`` menu, find the ``||sprites:set mySprite position to||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
-
+**Set your sprite's position**
 Click on one of the numbers in the ``||sprites:set mySprite position to||`` block to choose the starting position of your character.
 
 ~hint What are x and y?
  - x and y are called co-ordinates.
  - x is left and right on the screen.
- - y is up and down on the screen.
  - the bigger x is, the further left your character will start the game.
+ - y is up and down on the screen.
  - the bigger y is, the further down your character will start the game.
 hint~
 
@@ -80,7 +87,10 @@ mySprite.setPosition(20, 100)
 
 ## Move your character
 
-Click into the ``||controller:Controller||`` menu, find the ``||controller:move mySprite with buttons||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
+**Find the blocks**
+- Click into the ``||controller:Controller||`` menu.
+- Find the ``||controller:move mySprite with buttons||`` block
+- Drag-and-drop it inside the ``||loops:on start||`` loop.
 
 ~hint If you renamed your character earlier
  - click the small arrow next to 'mySprite', and choose the name you chose from the list.
@@ -108,14 +118,19 @@ Check the code for disconnected blocks, or exclamation marks. If you need help, 
 
 
 ## Add an enemy
+*Who, or what, do you want your enemy character to be?*
 
-Who, or what, do you want your enemy character to be?
+**Find the blocks**
+- Find another ``||sprites: set mySprite to||`` block
+- Drag-and-drop it inside the ``||loops:on start||`` loop.
 
-Click into the ``||sprites:Sprites||`` menu, find another ``||variables: set mySprite to||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
+**Change the sprite type**
+- The end of this block, says ``||sprites:of kind Player||``.
+- Click the small arrow next to it.
+- Change it to ``||sprites:Enemy||``.
 
-The end of this block, says ``||sprites:of kind Player||``. Click the small arrow next to ``||sprites:Player||``, and change it to ``||sprites:Enemy||``.
-
-Like you did for your player character, create or choose an image for your enemy.
+**Choose or create your sprite**
+- Like you did for your player character, create or choose an image for your enemy.
 
 ```blocks
 scene.setBackgroundImage(img`.`)
@@ -127,14 +142,18 @@ let mySprite2 = sprites.create(img`.`, SpriteKind.Enemy)
 
 
 ## Set the enemy's position
+*Where should the enemy start the game?*
 
-Where should the enemy start the game?
+**Find the blocks**
+- Add another ``||sprites: set mySprite position to||`` block.
 
-Click into the ``||sprites:Sprites||`` menu, find another ``||sprites: set mySprite position to||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
+**Choose the right sprite**
+- Click the small arrow next to ``||variables:mySprite||``.
+- Make sure that it is the name of your enemy - this is probably ``||variables:mySprite2||``.
 
-Click the small arrow next to ``||variables:mySprite||`` and make sure that it is the name of your enemy - this is probably ``||variables:mySprite2||``.
-
-Set enemy start position - remember that it will start to chase you soon, so if it starts too close to the player, the game will be very difficult!
+**Set your sprite's position**
+- Like you did for your player sprite, set the enemy's starting position.
+- It will start to chase you soon, so if it starts too close to the player the game will be very difficult!
 
 ```blocks
 scene.setBackgroundImage(img`.`)
@@ -148,9 +167,13 @@ mySprite.setPosition(140, 100)
 
 ## Set the enemy to follow your player
 
-Click into the ``||sprites:Sprites||`` menu, find the ``||sprites: set myEnemy follow mySprite||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
+**Find the blocks**
+- Click into the ``||sprites:Sprites||`` menu.
+- Add the ``||sprites: set myEnemy follow mySprite||`` block.
 
-Click the small arrow next to ``||variables:myEnemy||`` and change it to the name of your enemy - this is probably ``||variables:mySprite2||``.
+**Choose the right sprite**
+- Click the small arrow next to ``||variables:myEnemy||``.
+- Change it to the name of your enemy - this is probably ``||variables:mySprite2||``.
 
 ~hint If you renamed your character earlier
  - click the small arrow next to 'mySprite', and choose the name you chose from the list.
@@ -181,12 +204,15 @@ Check the code for disconnected blocks, or exclamation marks. If you need help, 
 
 
 ## Slow the enemy down
+*The enemy is quick! It will be very difficult to win the game at the moment.*
 
-The enemy is quick! It will be very difficult to win the game at the moment.
+**Expand a block**
+- Click the ``||sprites:+||`` symbol at the end of the ``||sprites:follow||`` block.
+- Reduce the speed of the enemy.
 
-Click the ``||sprites:+||`` symbol at the end of the ``||sprites:follow||`` block, and reduce the speed of the enemy.
-
-Test out the game, and edit the speed until you are happy with it.
+**Test the speed**
+- Test out your game, is the enemy too quick or too slow?
+- Edit the speed until you are happy with it.
 
 ```blocks
 scene.setBackgroundImage(img`.`)
@@ -200,16 +226,22 @@ mySprite2.follow(mySprite, 50)
 
 
 ## Add scoring
+*Now that it is possible to run away from the enemy, you can keep track of the score.*
 
-Now that it is possible to run away from the enemy, you can keep track of the score.
+**Make a new event loop**
+- Click the ``||game:Game||`` menu.
+- Find the ``||game:on game update every 500ms||`` block.
+- Drag-and-drop it onto an **empty space** on the screen.
 
-To do this, we need to make a new section of code.
+**Increase the score to get points**
+- Click the ``||info:Info||`` menu.
+- Find the ``||info:change score by 1||`` block.
+- Drag-and-drop it inside your new ``||game:on game update||`` loop.
 
-Click the ``||game:Game||`` menu, and find the ``||game:on game update every 500ms||`` block. Drag-and-drop it onto an empty space on the screen.
-
-Click the ``||info:Info||`` menu, find the ``||info:change score by 1||`` block, and drag-and-drop it inside your new ``||game:on game update||`` loop.
-
-Every half a second, you get a point! Test out you game, then decide how often you want to get points, and how many points you want to get.
+**Test the scoring**
+- At the moment, every half a second, you get a point!
+- Test out your game.
+    - How often you want to get points, and how many points you want to get.
 
 ~hint What to change?
  - to change how often you get points, edit the number in the 'on game update' loop
