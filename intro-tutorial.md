@@ -13,16 +13,19 @@ During the tutorial, you will only have a few blocks available to use, but there
 
 
 ## Choose a theme
+*Where do you want your game to be set?*
 
-Where do you want your game to be set?
+**Find the blocks**
+- Click into the ``||scene:Scene||`` menu
+- Find the ``||scene:set background image||`` block
+- Drag-and-drop it inside the ``||loops:on start||`` loop.
 
-Click into the ``||scene:Scene||`` menu, find the ``||scene:set background image||`` block, and drag-and-drop it inside the ``||loops:on start||`` loop.
+**Choose or create your background**
+- Click the grey box in the ``||scene:set background image||`` block to choose your background image.
+- You can draw your own, or click into the Gallery to pick a background.
+- Click Done on the bottom right to get back to the code editor and see your chosen picture in the game.
 
-Click the grey box in the ``||scene:set background image||`` block to choose your background image. You can draw your own, or click into the Gallery to pick a background.
-
-Click Done on the bottom right to get back to the code editor and see your chosen picture in the game.
-
-When you have finished, click Next on the tutorial to see the next instruction.
+*When you are happy with your background, click **Next** on the tutorial to see the next instruction.*
 
 ```blocks
 scene.setBackgroundImage(img`.`)
